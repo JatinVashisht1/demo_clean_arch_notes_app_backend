@@ -14,6 +14,11 @@ const notesSchema: Schema = new Schema<INotes>({
     tags:{
         type: [String],
         required: false
+    },
+    category:{
+        type: String,
+        required: false,
+        default: "default"
     }
 })
 

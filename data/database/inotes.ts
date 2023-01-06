@@ -1,5 +1,6 @@
 export interface INotes{
     title: string
     body: string
-    tags: Array<string>
+    tags: Array<string>,
+    category: string
 }

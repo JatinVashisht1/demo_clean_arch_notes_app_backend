@@ -44,8 +44,11 @@ import NotesRouter from "./routes/notes";
             const n: INotes = {
                 title: "",
                 body: "",
-                tags: []
+                tags: [],
+                category: "default"
             };
+
+            console.log(`main.ts: redNoteUsingTitle: \nnote is ${note}`)
 
             return n;
         },
@@ -59,11 +62,13 @@ import NotesRouter from "./routes/notes";
             const title1 = noteDB.title as string
             const body1 = noteDB.body
             const tags1 = noteDB.tags
+            const category = noteDB.category
             
             const note: INotes = {
                 title: title1,
                 body: body1,
-                tags: tags1
+                tags: tags1,
+                category: category
             }
             notes.push(note);
 
